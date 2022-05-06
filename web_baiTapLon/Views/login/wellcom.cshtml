@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "wellcom";
+    Layout = "~/Views/Shared/chung.cshtml";
+}
+
+<div>
+    <h2> Menu </h2>
+
+    <style>
+        .btn {
+            border: 1px solid white;
+            background-color: lightgreen;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            color: black;
+            margin-top: 15px;
+            border-radius: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+            a:hover {
+                background-color: green;
+                color: white;
+            }
+
+        .contai {
+            background-color: gainsboro;
+            margin: 20px 15px;
+            padding: 20px;
+        }
+    </style>
+    <div class="contai">
+        <h3> Chỉnh sửa thông tin sản phẩm</h3>
+
+        <a class="btn " @Html.ActionLink("Thêm sản Phẩm", "Themsp", "Pro")></a>
+        <br />
+        <a class="btn" @Html.ActionLink("Sửa sản Phẩm", "viewupdatesp", "Pro")></a>
+        <br />
+        <a class="btn" @Html.ActionLink("Xóa sản Phẩm", "viewupdatesp", "Pro")></a>
+    </div>
+    <div class="contai">
+        <h3> Chỉnh Sửa thông tin nhân viên</h3>
+        <br />
+        <a class="btn" @Html.ActionLink("Thêm Nhân Viên", "themnhanvien", "about")></a>
+        <br />
+        <a class="btn" @Html.ActionLink("Sửa Nhân Viên", "viewupnhanvien", "about")></a>
+        <br />
+        <a class="btn" @Html.ActionLink("Xóa Nhân Viên", "viewupnhanvien", "about")></a>
+    </div>
+    <div class="contai">
+        <h3> Quản lý đơn hàng</h3>
+        <br />
+        <a class="btn" @Html.ActionLink("Đơn hàng", "qlyhd", "Cart")></a>
+        
+    </div>
+
+
+</div>
+

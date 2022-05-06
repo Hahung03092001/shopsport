@@ -1,0 +1,27 @@
+.product-item > img,
+.down-content > h4 {
+  cursor: pointer;
+}
+.logout{
+  color: white;
+  font-size: 20px;
+  padding-left: 15px;
+  margin-bottom:10px ;
+}
+.clickLogout{
+  cursor: pointer;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: var(--primaryColor)!important ;
+  padding: 0 5px;
+  border-radius: 30%;
+  color: var(--mainWhite);
+}
+

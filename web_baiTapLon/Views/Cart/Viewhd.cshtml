@@ -1,0 +1,30 @@
+﻿@model IEnumerable<web_baiTapLon.data.dtChiTietHDB>
+
+<style>
+    .ty_table{
+        margin:20px 25px;
+    }
+</style>
+<div class="ty_table">
+    <table class="table">
+        <tr>
+            <th> Mã Hóa Đơn</th>
+            <th> Mã Sản Phẩm</th>
+            <th> Số Lượng</th>
+            <th> Thành Tiền</th>
+            <th> Khuyến Mại</th>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td> @i.MaHDB</td>
+                <td> @i.MaSP</td>
+                <td> @i.SLBan</td>
+                <td> @i.ThanhTien</td>
+                <td> @i.KhuyenMai</td>
+            </tr>
+
+        }
+
+    </table>
+</div>

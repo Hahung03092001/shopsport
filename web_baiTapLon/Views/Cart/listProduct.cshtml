@@ -1,0 +1,30 @@
+﻿@model IEnumerable<web_baiTapLon.Models.CartModel>
+
+
+@foreach (var i in Model)
+{
+
+<tr class="cart-row">
+    <td>
+        <img src="~/Content/images/@i.product.Img" alt="Image" width="50px" height="50px">
+        <span>@i.product.TenSP</span>
+    </td>
+    <td class="item-price">@i.product.DonGiaBan</td>
+    <td>
+        <div class="qty">
+            <button class="btn-minus"><i class="fa fa-minus"></i></button>
+
+            <span class="item-quantity ">
+                @i.count
+            </span>
+            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+        </div>
+    </td>
+    <td><div class="money">@i.money</div></td>
+    <td><i class="fa fa-trash fa-2x delete" style="cursor:pointer;" id="@i.index"></i></td>
+</tr>}
+
+
+
+
+

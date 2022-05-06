@@ -1,0 +1,85 @@
+﻿@model IEnumerable<web_baiTapLon.data.dtSanPham>
+
+
+<style>
+    .ADDProduct {
+        margin: 20px 0 0 0px;
+        background-color: red;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        width: 130px;
+    }
+
+    #ADDProduct:hover {
+        background-color: #ff000095;
+    }
+
+    .soluong {
+        width: 100px;
+        margin: 0 15px;
+    }
+</style>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="product-item" style="display: flex; width: 500px; justify-content: space-between; align-items: center; ">
+                <div style="width:300px;">
+                    <img class="fitanh" src="~/Content/images/@item.Img" alt="">
+
+                    <div class="down-content">
+                        <h4>@item.TenSP</h4>
+                        <h6>@item.DonGiaBan</h6>
+                        <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                        </ul>
+                        <span>Amount @item.SoLuong</span>
+                    </div>
+                </div>
+                <div style="margin:0 15px;">
+                    <input type="number" min="0" class="soluong" value="1" />
+                    <div class="ADDProduct" id="@item.MaSP"> Buy</div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<script>
+
+    $("div.ADDProduct").click((e) => {
+        var listProductCart = JSON.parse(localStorage.getItem("listProducts"));
+        var id = $(this).attr("id");
+        var count = $("input.soluong").val();
+        var object = {
+            id: id,
+            count: count
+        }
+        var check = false;
+
+        for (var i in listProductCart) {
+            if (listProductCart[i].id == id) {
+                listProductCart[i].count = (Number(listProductCart[i].count) + Number(count)).toString();
+                check = true;
+                break;
+            }
+        }
+        if (check == false)
+            listProductCart.push(object);
+        window.localStorage.setItem("listProducts", JSON.stringify(listProductCart));
+        alert("thêm vào giỏ hàng thành công");
+        $("div.cart-items").text(listProductCart.length);
+        window.location = "../Pro/Index";
+    });
+
+</script>
+
+
+
+
+

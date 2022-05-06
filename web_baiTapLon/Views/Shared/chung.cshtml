@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet" />
+
+    <title>Sports clothing store Products</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="~/Scripts/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="~/Content/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/Content/css/templatemo-sixteen.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.css" rel="stylesheet" />
+    <link href="~/Content/css/cssCommon.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/89849850de.js"
+            crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+    <header class="">
+
+        @Html.Partial("Header")
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-content">
+                        <h4>new arrivals</h4>
+                        <h2>Sport store</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderBody()
+
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="~/Scripts/js/custom.js"></script>
+    <script src="~/Scripts/js/owl.js"></script>
+    <script src="~/Scripts/js/slick.js"></script>
+    <script src="~/Scripts/js/isotope.js"></script>
+    <script src="~/Scripts/js/accordions.js"></script>
+    <script src="~/Scripts/js/Page/LogOut.js"></script>
+
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyCXRLEG0enLRkcT9qR2jYEAEB36cGHLMso",
+            authDomain: "mindx-ci-72-8229f.firebaseapp.com",
+            projectId: "mindx-ci-72-8229f",
+            storageBucket: "mindx-ci-72-8229f.appspot.com",
+            messagingSenderId: "317724844262",
+            appId: "1:317724844262:web:04cb9405164a3c48ab9b27",
+        });
+    </script>
+</body>
+</html>

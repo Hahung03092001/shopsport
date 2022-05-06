@@ -1,0 +1,84 @@
+﻿@model web_baiTapLon.data.dtSanPham
+
+@{
+    ViewBag.Title = "XoaSanPham";
+    Layout = "~/Views/Shared/chung.cshtml";
+}
+
+
+<style>
+    .xoa {
+        width: 80%;
+        background-color: lavender;
+        margin-left: 10%;
+        margin-top: 30px;
+        padding: 20px 20px;
+        border-radius: 30px;
+    }
+
+    .butxoa {
+        border-style: solid;
+        border-color: orangered;
+        border-radius: 20px;
+    }
+
+        .butxoa:hover {
+            background-color: orangered;
+        }
+</style>
+
+<div class="xoa">
+    <h4>Xóa Sản Phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dtLoai.TenLoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dtLoai.TenLoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGiaBan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGiaBan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default butxoa" /> 
+            
+        </div>
+    }
+</div>

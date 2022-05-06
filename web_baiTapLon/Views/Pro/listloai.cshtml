@@ -1,0 +1,28 @@
+﻿@model IEnumerable<web_baiTapLon.data.dtLoai>
+
+<div class="col-md-12">
+    <div class="filters">
+        <ul>
+            <li class="active" data-filter="*"></li>
+            @foreach (var i in Model)
+            {
+                <li id="@i.MaLoai">@i.TenLoai</li>
+            }
+            
+        </ul>
+    </div>
+</div>
+
+<script>
+    $("li").click(function (e) {
+        var id = $(this).attr("id");
+        $.ajax({
+            url: "/Pro/LoadProducts",
+            data: { CatId: id },
+            success: function (response) {
+                $("div.con").html(response);
+            }
+        });
+    });
+</script>
+

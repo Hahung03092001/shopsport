@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "SelectedProduct";
+    Layout = "~/Views/Shared/itemProductShared.cshtml";
+}
+
+<script>
+    var id = window.localStorage.getItem("id");
+    $.ajax({
+        url: "/Pro/LoadProductsItem",
+        data: { CatId: id },
+        success: function (response) {
+            $("div.con").html(response);
+        }
+    });
+</script>
+

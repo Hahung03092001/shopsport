@@ -1,0 +1,76 @@
+﻿
+@model IEnumerable<web_baiTapLon.data.dtSanPham>
+
+
+
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .add {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: white;
+        width: 120px;
+        height: 30px;
+        background-color: red;
+        padding: 4px 0 0 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .hoverAdd:hover .add {
+        display: flex;
+    }
+
+    .hoverAdd:hover img {
+        background-color: rgba(253, 6, 6, 0.4);
+    }
+
+    .hoverAdd {
+        position: relative;
+    }
+</style>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="product-item">
+                <div class="hoverAdd">
+                    <img class="fitanh" src="~/Content/images/@item.Img" alt="">
+                    <div class="add" id="@item.MaSP">Add to cart</div>
+                </div>
+
+                <div class="down-content">
+                    <h4>@item.TenSP</h4>
+                    <h6>@item.DonGiaBan</h6>
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <span>Amount @item.SoLuong</span>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    $("div.add").click(function (e) {
+        var id = $(this).attr("id");
+        window.localStorage.setItem("id", id);
+
+        window.location = "../Cart/index";
+    });
+</script>
+
+
+
+

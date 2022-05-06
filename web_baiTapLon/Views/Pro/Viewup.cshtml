@@ -1,0 +1,58 @@
+﻿
+@model IEnumerable<web_baiTapLon.data.dtSanPham>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="products">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div class="col-md-4">
+                <div class="product-item">
+                    <a href="#"><img class="fitanh" src="~/Content/images/@item.Img" alt=""></a>
+                    <div class="down-content">
+                        <a href="#"><h4>@item.TenSP</h4></a>
+
+                        <h6>@item.DonGiaBan</h6>
+                        <a class="upd sua" href="~/Pro/SuaSanPham?MaSP=@item.MaSP">Update</a>
+                        <a class="upd xoa" href="~/Pro/XoaSanPham?MaSP=@item.MaSP">Delete</a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+            }
+        
+        </div>
+        </div>
+    </div>
+        <style>
+            .upd {
+                width: 70px;
+                height: 30px;
+                border-style:solid;
+                border-color:orangered;
+                border-radius: 20px;
+                text-align:center;
+                
+            }
+            .sua{
+                float:left
+            }
+
+                .upd:hover {
+                    background-color:orangered;
+                }
+            .xoa{
+                float: right;
+            }
+        </style>
+
+
+
+
+

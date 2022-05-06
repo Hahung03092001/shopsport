@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/cart_layout.cshtml";
+}
+
+<script>
+
+
+    var listProductCart = JSON.parse(localStorage.getItem("listProducts"));
+    for (const i in listProductCart) {
+        var id = listProductCart[i].id;
+        var count = listProductCart[i].count;
+        $.ajax({
+            url: "/Cart/LoadProductsCart",
+            data: { CatId: id, count: count, index: i },
+            success: function (response) {
+                document.querySelector("tbody").insertAdjacentHTML("beforeend", response);
+
+            }
+        });
+    }
+
+    let i = document.querySelectorAll(".delete")
+    console.log(i);
+
+    var id = window.localStorage.getItem("id");
+    $.ajax({
+        url: "/Pro/LoadProductsItem",
+        data: { CatId: id },
+        success: function (response) {
+            $("div.con").html(response);
+        }
+    });
+</script>
+
+
+

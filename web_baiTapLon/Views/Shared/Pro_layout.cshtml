@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet" />
+
+
+
+    <title>Sixteen Clothing HTML Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Scripts/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--
+
+
+
+    -->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/Content/css/fontawesome.css">
+    <link rel="stylesheet" href="~/Content/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="~/Content/css/owl.css">
+    <script src="https://kit.fontawesome.com/89849850de.js"
+            crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+    <header class="">
+
+        @Html.Partial("Header")
+
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+        <div class="owl-banner owl-carousel">
+            <div class="banner-item-01">
+                <div class="text-content">
+                    <h4>Best Offer</h4>
+                    <h2>New Arrivals On Sale</h2>
+                </div>
+            </div>
+            <div class="banner-item-02">
+                <div class="text-content">
+                    <h4>Flash Deals</h4>
+                    <h2>Get your best products</h2>
+                </div>
+            </div>
+            <div class="banner-item-03">
+                <div class="text-content">
+                    <h4>Last Minute</h4>
+                    <h2>Grab last minute deals</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Banner Ends Here -->
+
+        <div class="latest-products">
+            <div class="container">
+
+                @Html.Partial("productHome")
+
+            </div>
+        </div>
+        @RenderBody()
+        <div class="best-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h2>About Sixteen Clothing</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="left-content">
+                            <h4>Looking for the best products?</h4>
+                            <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+                            <ul class="featured-list">
+                                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                                <li><a href="#">Consectetur an adipisicing elit</a></li>
+                                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
+                                <li><a href="#">Corporis, omnis doloremque</a></li>
+                                <li><a href="#">Non cum id reprehenderit</a></li>
+                            </ul>
+                            <a href="about.html" class="filled-button">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right-image">
+                            <img src="assets/images/feature-image.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="inner-content">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="filled-button">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+       
+        <!-- Bootstrap core JavaScript -->
+        <script src="~/Scripts/vendor/jquery/jquery.min.js"></script>
+        <script src="~/Scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Additional Scripts -->
+        <script src="~/Scripts/js/custom.js"></script>
+        <script src="~/Scripts/js/owl.js"></script>
+        <script src="~/Scripts/js/slick.js"></script>
+        <script src="~/Scripts/js/isotope.js"></script>
+        <script src="~/Scripts/js/accordions.js"></script>
+        <script src="~/Scripts/js/Page/LogOut.js"></script>
+
+
+        <script language="text/Javascript">
+            cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+            function clearField(t) {                   //declaring the array outside of the
+                if (!cleared[t.id]) {                      // function makes it static and global
+                    cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                    t.value = '';         // with more chance of typos
+                    t.style.color = '#fff';
+                }
+            }
+        </script>
+
+        <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
+        <script>
+            firebase.initializeApp({
+                apiKey: "AIzaSyCXRLEG0enLRkcT9qR2jYEAEB36cGHLMso",
+                authDomain: "mindx-ci-72-8229f.firebaseapp.com",
+                projectId: "mindx-ci-72-8229f",
+                storageBucket: "mindx-ci-72-8229f.appspot.com",
+                messagingSenderId: "317724844262",
+                appId: "1:317724844262:web:04cb9405164a3c48ab9b27",
+            });
+        </script>
+</body>
+
+</html>
